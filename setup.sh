@@ -7,3 +7,6 @@ grep -rl $ORIGINAL_URL | grep -v README.md | xargs sed -i'' "s|$ORIGINAL_URL|$NE
 git add .
 git commit -m "Switch repository to $NEW_URL"
 git push
+
+kubectl label nodes talos-399-byv talos-qwz-74v talos-rpk-wlo talos-s6m-qr4 node-role.kubernetes.io/worker=
+kubectl label nodes talos-399-byv talos-qwz-74v talos-rpk-wlo talos-s6m-qr4 node-role.kubernetes.io/database=
